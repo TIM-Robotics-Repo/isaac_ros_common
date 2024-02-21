@@ -150,8 +150,8 @@ ENV LD_LIBRARY_PATH="/usr/lib/aarch64-linux-gnu/tegra/weston:${LD_LIBRARY_PATH}"
 ENV LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:/usr/lib/aarch64-linux-gnu-host"
 ENV PATH="${PATH}:/usr/local/cuda/bin"
 
-# https://forums.developer.nvidia.com/t/error-importerror-usr-lib-aarch64-linux-gnu-libgomp-so-1-cannot-allocate-memory-in-static-tls-block-i-looked-through-available-threads-already/166494/3
-ENV LD_PRELOAD="/usr/lib/aarch64-linux-gnu/libgomp.so.1"
+# # https://forums.developer.nvidia.com/t/error-importerror-usr-lib-aarch64-linux-gnu-libgomp-so-1-cannot-allocate-memory-in-static-tls-block-i-looked-through-available-threads-already/166494/3
+# ENV LD_PRELOAD="/usr/lib/aarch64-linux-gnu/libgomp.so.1"
 
 # # PyTorch (NV CUDA edition)
 # # https://docs.nvidia.com/deeplearning/frameworks/install-pytorch-jetson-platform/index.html
