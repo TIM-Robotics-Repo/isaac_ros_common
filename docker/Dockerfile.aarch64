@@ -153,10 +153,10 @@ ENV PATH="${PATH}:/usr/local/cuda/bin"
 # https://forums.developer.nvidia.com/t/error-importerror-usr-lib-aarch64-linux-gnu-libgomp-so-1-cannot-allocate-memory-in-static-tls-block-i-looked-through-available-threads-already/166494/3
 ENV LD_PRELOAD="/usr/lib/aarch64-linux-gnu/libgomp.so.1"
 
-# PyTorch (NV CUDA edition)
-# https://docs.nvidia.com/deeplearning/frameworks/install-pytorch-jetson-platform/index.html
-RUN python3 -m pip install --no-cache \
-        https://developer.download.nvidia.cn/compute/redist/jp/v50/pytorch/torch-1.13.0a0+340c4120.nv22.06-cp38-cp38-linux_aarch64.whl
+# # PyTorch (NV CUDA edition)
+# # https://docs.nvidia.com/deeplearning/frameworks/install-pytorch-jetson-platform/index.html
+# RUN python3 -m pip install --no-cache \
+#         https://developer.download.nvidia.cn/compute/redist/jp/v50/pytorch/torch-1.13.0a0+340c4120.nv22.06-cp38-cp38-linux_aarch64.whl
 
 # # Install Triton server 2.24 from https://github.com/triton-inference-server/server/releases/tag/v2.24.0
 # RUN apt-get update && apt-get install -y --no-install-recommends \
