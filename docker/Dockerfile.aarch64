@@ -174,20 +174,20 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 && rm -rf /var/lib/apt/lists/* \
 && apt-get clean
 
-RUN mkdir -p /opt/tritonserver && cd /opt/tritonserver \
-    && wget https://github.com/triton-inference-server/server/releases/download/v2.24.0/tritonserver2.24.0-jetpack5.0.2.tgz \
-    && tar -xzvf tritonserver2.24.0-jetpack5.0.2.tgz \
-    && rm tritonserver2.24.0-jetpack5.0.2.tgz
+# RUN mkdir -p /opt/tritonserver && cd /opt/tritonserver \
+#     && wget https://github.com/triton-inference-server/server/releases/download/v2.24.0/tritonserver2.24.0-jetpack5.0.2.tgz \
+#     && tar -xzvf tritonserver2.24.0-jetpack5.0.2.tgz \
+#     && rm tritonserver2.24.0-jetpack5.0.2.tgz
 
-ENV LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:/opt/tritonserver/lib"
+# ENV LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:/opt/tritonserver/lib"
 
-# Add MQTT binaries and libraries
-RUN apt-add-repository ppa:mosquitto-dev/mosquitto-ppa \
-    && apt-get update && apt-get install -y \
-        mosquitto \
-        mosquitto-clients \
-&& rm -rf /var/lib/apt/lists/* \
-&& apt-get clean
+# # Add MQTT binaries and libraries
+# RUN apt-add-repository ppa:mosquitto-dev/mosquitto-ppa \
+#     && apt-get update && apt-get install -y \
+#         mosquitto \
+#         mosquitto-clients \
+# && rm -rf /var/lib/apt/lists/* \
+# && apt-get clean
 
 # # Note: VPN cannot be on for pymongo download
 # RUN python3 -m pip install -U \
